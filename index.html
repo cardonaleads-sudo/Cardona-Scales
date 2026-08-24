@@ -190,6 +190,7 @@
     cursor:pointer;
   }
   .btn-next:hover,.btn-submit:hover{background:var(--gold-600);}
+  .btn-submit:disabled{opacity:0.6;cursor:default;}
   .btn-back{
     background:none;
     border:none;
@@ -449,17 +450,42 @@
     var q2 = document.querySelector('input[name="q2"]:checked');
     var q3 = document.querySelector('input[name="q3"]:checked');
 
-    var body = 'Name: ' + name + '\n' +
-      'Business: ' + business + '\n' +
-      'Phone: ' + phone + '\n' +
-      'Email: ' + email + '\n\n' +
-      'Business type: ' + (q1 ? q1.value : '') + '\n' +
-      'Ad budget: ' + (q2 ? q2.value : '') + '\n' +
-      'Biggest bottleneck: ' + (q3 ? q3.value : '');
+    var submitBtn = document.getElementById('cs-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
 
-    window.location.href = 'mailto:cardona.scales@gmail.com?subject=' +
-      encodeURIComponent('Call request: ' + business) +
-      '&body=' + encodeURIComponent(body);
+    fetch('https://hook.us2.make.com/9ldvanjrl2r7w3l3xcae92p55rmno25j', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        business: business,
+        phone: phone,
+        email: email,
+        businessType: q1 ? q1.value : '',
+        adBudget: q2 ? q2.value : '',
+        bottleneck: q3 ? q3.value : ''
+      })
+    })
+    .then(function(res){
+      if(!res.ok) throw new Error('Request failed');
+      showConfirmation();
+    })
+    .catch(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Book my call';
+      err.textContent = 'Something went wrong sending your info. Please try again, or email cardona.leads@gmail.com directly.';
+      err.style.display = 'block';
+    });
   });
+
+  function showConfirmation(){
+    var quiz = document.getElementById('cs-quiz');
+    var wrap = quiz.parentElement;
+    var confirmation = document.createElement('div');
+    confirmation.className = 'quiz-card';
+    confirmation.innerHTML = '<h3>You\'re booked in</h3><p style="font-size:14.5px;line-height:1.65;color:var(--ink-500);margin-top:8px;">Thanks &mdash; we\'ve got your details. We\'ll be in touch shortly to confirm a time for your call.</p>';
+    wrap.replaceChild(confirmation, quiz);
+  }
 })();
 </script>
