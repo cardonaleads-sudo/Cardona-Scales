@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cardona Scales</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@400;500;600;700&display=swap">
 <style>
@@ -68,7 +73,7 @@
     background-size:20px 20px;
   }
   .hero h1{
-    font-size:50px;
+    font-size:46px;
     line-height:1.1;
     font-weight:500;
     margin-top:22px;
@@ -259,19 +264,29 @@
   .closing .accent{color:var(--gold-500);font-style:italic;}
   .closing .signature{margin-top:18px;font-size:14px;color:var(--ink-500);}
 
+  .top-contact{
+    text-align:center;
+    padding:14px 0 0;
+    font-size:13px;
+    color:var(--ink-500);
+  }
+  .top-contact a{text-decoration:none;color:var(--ink-700);}
+  .top-contact a:hover{color:var(--gold-500);}
+
   footer{padding:36px 0 56px;border-top:1px solid var(--line);text-align:center;}
   .footer-contact p{margin:4px 0;font-size:14px;color:var(--ink-500);}
   .footer-contact a{text-decoration:none;color:var(--ink-700);}
   .footer-contact a:hover{color:var(--gold-500);}
 
   @media (max-width:640px){
-    .hero h1{font-size:34px;}
+    .hero h1{font-size:32px;}
     .why-grid{grid-template-columns:1fr;}
     .quiz-card{padding:28px 22px;}
     .founding{padding:40px 24px;}
   }
 </style>
-
+</head>
+<body>
 <section class="hero wrap">
   <div class="mark">
     <svg viewBox="0 0 100 100" aria-hidden="true">
@@ -281,15 +296,17 @@
     <span class="wordmark"><span class="black">Cardona</span> <span class="gold">Scales</span></span>
   </div>
 
-  <h1>Qualified installation estimates<span class="accent">for flooring &amp; carpet pros</span></h1>
+  <h1>Ads that book jobs<span class="accent">and a website that keeps them coming</span></h1>
+
+  <p class="top-contact">Francisco Cardona · <a href="mailto:cardona.scales@gmail.com">cardona.scales@gmail.com</a> · <a href="tel:+16472618580">+1 (647) 261-8580</a></p>
 
   <div class="badges">
-    <div class="badge"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"/></svg>Built for flooring &amp; carpet installers</div>
-    <div class="badge"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"/></svg>No long-term contracts to start</div>
-    <div class="badge"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"/></svg>Direct access to your strategist</div>
+    <div class="badge"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"></path></svg>Built for flooring &amp; carpet installers</div>
+    <div class="badge"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"></path></svg>Ads, a website, or both</div>
+    <div class="badge"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"></path></svg>Direct access to your strategist</div>
   </div>
 
-  <p class="cta-arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 3v14M4 11l6 6 6-6"/></svg>Fill this out &amp; book your call<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 3v14M4 11l6 6 6-6"/></svg></p>
+  <p class="cta-arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 3v14M4 11l6 6 6-6"></path></svg>Fill this out &amp; book your call<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 3v14M4 11l6 6 6-6"></path></svg></p>
 
   <form class="quiz-card" id="cs-quiz">
     <div class="progress">
@@ -310,11 +327,11 @@
     </div>
 
     <div class="quiz-step" data-step="1">
-      <h3>What's your current monthly ad budget?</h3>
-      <label class="option"><input type="radio" name="q2" value="None yet">None yet</label>
-      <label class="option"><input type="radio" name="q2" value="Under $1,000">Under $1,000</label>
-      <label class="option"><input type="radio" name="q2" value="$1,000-$3,000">$1,000-$3,000</label>
-      <label class="option"><input type="radio" name="q2" value="$3,000+">$3,000+</label>
+      <h3>Which service are you looking for?</h3>
+      <label class="option"><input type="radio" name="q2" value="Facebook Ad Management">Facebook Ad Management</label>
+      <label class="option"><input type="radio" name="q2" value="Website Design & Build">Website Design &amp; Build</label>
+      <label class="option"><input type="radio" name="q2" value="Both">Both</label>
+      <label class="option"><input type="radio" name="q2" value="Not sure yet">Not sure yet</label>
       <p class="error-text">Pick one to continue.</p>
       <div class="quiz-nav"><button type="button" class="btn-back" data-back="1">Back</button><button type="button" class="btn-next" data-next="1">Next</button></div>
     </div>
@@ -322,9 +339,9 @@
     <div class="quiz-step" data-step="2">
       <h3>What's slowing your calendar down most?</h3>
       <label class="option"><input type="radio" name="q3" value="Not enough leads">Not enough leads</label>
-      <label class="option"><input type="radio" name="q3" value="Too many unqualified leads">Too many unqualified leads</label>
-      <label class="option"><input type="radio" name="q3" value="Slow season gaps">Slow season gaps</label>
+      <label class="option"><input type="radio" name="q3" value="Outdated or no website">Outdated or no website</label>
       <label class="option"><input type="radio" name="q3" value="No consistent ad system">No consistent ad system</label>
+      <label class="option"><input type="radio" name="q3" value="Too many unqualified leads">Too many unqualified leads</label>
       <p class="error-text">Pick one to continue.</p>
       <div class="quiz-nav"><button type="button" class="btn-back" data-back="2">Back</button><button type="button" class="btn-next" data-next="2">Next</button></div>
     </div>
@@ -341,9 +358,9 @@
   </form>
 
   <div class="trust-row">
-    <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"/></svg>No obligation</span>
-    <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"/></svg>Free call</span>
-    <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"/></svg>Limited founding spots</span>
+    <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"></path></svg>No obligation</span>
+    <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"></path></svg>Free call</span>
+    <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-8"></path></svg>Limited founding spots</span>
   </div>
 </section>
 
@@ -351,24 +368,24 @@
 
 <section class="why wrap">
   <div class="section-head">
-    <p class="eyebrow">How it works</p>
-    <h2>One system built around your calendar, not vanity clicks</h2>
+    <p class="eyebrow">What we do</p>
+    <h2>One system for getting found and getting booked</h2>
   </div>
   <div class="why-grid">
     <div class="why-card">
       <div class="num">01</div>
-      <h3>AI-optimized campaigns</h3>
-      <p>Meta and Google ads targeted at homeowners actively planning a flooring or carpet project, with budget shifted daily toward what's converting.</p>
+      <h3>Facebook Ad Management</h3>
+      <p>Meta ads targeted at homeowners actively planning a flooring or carpet project, with budget shifted daily toward what's converting.</p>
     </div>
     <div class="why-card">
       <div class="num">02</div>
-      <h3>Built-in qualification</h3>
-      <p>Every lead is filtered by project size, budget, and timeline before it ever reaches your phone.</p>
+      <h3>Website Design &amp; Build</h3>
+      <p>A fast, mobile-ready site built to turn visitors into booked estimates — your work and reviews up front, not a generic template.</p>
     </div>
     <div class="why-card">
       <div class="num">03</div>
-      <h3>Creative tested weekly</h3>
-      <p>Offers and ad variations are tested continuously so cost per booked estimate keeps dropping, not just at launch.</p>
+      <h3>Built-In Qualification</h3>
+      <p>Every lead — from ads or your site — is filtered by project size, budget, and timeline before it ever reaches your phone.</p>
     </div>
   </div>
 </section>
@@ -377,14 +394,14 @@
   <div class="founding">
     <p class="eyebrow">Founding partner program</p>
     <h2>We're onboarding our first flooring &amp; carpet partners</h2>
-    <p>Cardona Scales is new, and we're not going to pretend otherwise with fake numbers. What we're offering instead: a small number of founding spots with direct, hands-on access to me personally, priority campaign building, and pricing structured around results as we build our track record together.</p>
+    <p>Cardona Scales is new, and we're not going to pretend otherwise with fake numbers. What we're offering instead: a small number of founding spots — for ad management, a new website, or both — with direct, hands-on access to me personally, priority work, and pricing structured around results as we build our track record together.</p>
     <div class="spots">Limited spots available</div>
   </div>
 </section>
 
 <section class="closing wrap">
   <h2>We can't wait to see you<span class="accent"> on the call.</span></h2>
-  <p class="signature">&mdash; Francisco Cardona, Founder</p>
+  <p class="signature">— Francisco Cardona, Founder</p>
 </section>
 
 <footer>
@@ -463,7 +480,7 @@
         phone: phone,
         email: email,
         businessType: q1 ? q1.value : '',
-        adBudget: q2 ? q2.value : '',
+        serviceInterested: q2 ? q2.value : '',
         bottleneck: q3 ? q3.value : ''
       })
     })
@@ -489,3 +506,5 @@
   }
 })();
 </script>
+</body>
+</html>
